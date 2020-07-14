@@ -1,0 +1,2 @@
+py capture.py
+pause

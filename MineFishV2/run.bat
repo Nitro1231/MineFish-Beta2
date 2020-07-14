@@ -1,2 +1,2 @@
-py main.py
+py MineFishV2.py
 pause

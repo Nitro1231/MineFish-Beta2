@@ -2,21 +2,20 @@ import sys
 import cv2
 import time
 import pyautogui
+import configparser
 import numpy as np
 
 print('MineFish V2')
 print('[V2.0.0]')
-print('By Nitro (nitro0@naver.com)\n')
+print('By Nitro (admin@nitrostudio.dev)\n')
 
-text = './img/Custom.png'
+config = configparser.ConfigParser()
+config.read('./config.ini')
 
-mW = 1920
-mH = 1080
-sizeW = 400
-sizeH = 400
+text = f'./img/{config.get("Setting", "image").strip()}'
 
-locStart = (mW - sizeW, mH - sizeH)
-locEnd = (sizeW, sizeH)
+locStart = (int(config.get("Setting", "starting_x").strip()),int(config.get("Setting", "starting_y").strip()))
+locEnd = (int(config.get("Setting", "size_x").strip()), int(config.get("Setting", "size_y").strip()))
 
 def getScreen(p1, p2):
     img = pyautogui.screenshot(region=p1+p2)
@@ -30,7 +29,7 @@ def detectImg(image, imgT, precision, p1) :
     imgBGR = cv2.merge([r,g,b])
 
     imgGray = cv2.cvtColor(imgBGR, cv2.COLOR_BGR2GRAY)
-    target = cv2.imread(imgT, 0) # cv.IMREAD_GRAYSCALE
+    target = cv2.imread(imgT, 0) # cv.IMREAD_GRAYSCALE 
     w, h = target.shape[::-1]
 
     res = cv2.matchTemplate(imgGray, target, cv2.TM_CCOEFF_NORMED)    
