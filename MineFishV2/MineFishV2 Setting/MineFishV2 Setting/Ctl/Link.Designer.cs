@@ -30,10 +30,10 @@
             // iconBox
             // 
             this.iconBox.BackColor = System.Drawing.Color.Transparent;
-            this.iconBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconBox.Location = new System.Drawing.Point(0, 0);
+            this.iconBox.Location = new System.Drawing.Point(4, 5);
             this.iconBox.Name = "iconBox";
-            this.iconBox.Size = new System.Drawing.Size(50, 50);
+            this.iconBox.Size = new System.Drawing.Size(40, 40);
+            this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconBox.TabIndex = 0;
             this.iconBox.TabStop = false;
             this.iconBox.Click += new System.EventHandler(this.iconBox_Click);

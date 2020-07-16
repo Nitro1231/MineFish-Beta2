@@ -6,11 +6,21 @@ using System.Drawing.Drawing2D;
 
 namespace MineFishV2_Setting.Ctl {
     public partial class Link : UserControl {
+        Image img = null;
+
         [Category("User")]
         public string URL { get; set; } = "";
 
         [Category("User")]
-        public Image image { get; set; } = null;
+        public Image image {
+            get {
+                return img;
+            }
+            set {
+                img = value;
+                iconBox.Image = image;
+            }
+        }
 
         [Category("User")]
         public Color Color1 { get; set; } = Color.FromArgb(248, 88, 162);
@@ -21,10 +31,12 @@ namespace MineFishV2_Setting.Ctl {
         public Link() {
             InitializeComponent();
             Utils.smoothBorder(this, Height);
+            iconBox.Size = new Size(Width - 10, Height - 10);
             iconBox.Image = image;
         }
 
         private void iconBox_Resize(object sender, EventArgs e) {
+            iconBox.Size = new Size(Width - 10, Height - 10);
             Utils.smoothBorder(this, Height);
         }
 

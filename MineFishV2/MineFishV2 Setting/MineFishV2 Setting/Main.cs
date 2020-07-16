@@ -6,6 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using FontAwesome;
+using FontAwesome.Sharp;
 
 namespace MineFishV2_Setting {
     public partial class Main : Form {
@@ -29,6 +31,17 @@ namespace MineFishV2_Setting {
             centerPanel.Left = (Width - centerPanel.Width) / 2;
             snsPanel.Location = new Point((Width - snsPanel.Width) / 2, mainPanel.Height - snsPanel.Height - 20);
             verLabel.Location = new Point(mainPanel.Width - verLabel.Width - 5, mainPanel.Height - verLabel.Height);
+            
+            minBox.Image = IconChar.CompressAlt.ToBitmap(50, Color.White);
+            closeBox.Image = IconChar.Times.ToBitmap(50, Color.White);
+
+            mailLink.image = IconChar.At.ToBitmap(50, Color.White);
+            blogLink.image = IconChar.PaperPlane.ToBitmap(50, Color.White);
+            gitLink.image = IconChar.Github.ToBitmap(50, Color.White);
+            ytLink.image = IconChar.Youtube.ToBitmap(50, Color.White);
+            tLink.image = IconChar.Twitter.ToBitmap(50, Color.White);
+            dcLink.image = IconChar.Discord.ToBitmap(50, Color.White);
+
             Utils.smoothBorder(this, 20);
             Utils.smoothBorder(mainPanel, 20);
 
@@ -83,6 +96,18 @@ namespace MineFishV2_Setting {
             Myini.Write("starting_y", startY.Text);
             Myini.Write("size_x", sizeX.Text);
             Myini.Write("size_y", sizeY.Text);
+        }
+
+        private void startBtn_OnClick(object sender, EventArgs e) {
+
+        }
+
+        private void minBox_Click(object sender, EventArgs e) {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeBox_Click(object sender, EventArgs e) {
+            Close();
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e) {

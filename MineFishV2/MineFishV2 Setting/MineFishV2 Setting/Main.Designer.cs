@@ -36,22 +36,27 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.verLabel = new System.Windows.Forms.Label();
+            this.snsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.centerPanel = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.snsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.minBox = new System.Windows.Forms.PictureBox();
+            this.closeBox = new System.Windows.Forms.PictureBox();
             this.mailLink = new MineFishV2_Setting.Ctl.Link();
             this.blogLink = new MineFishV2_Setting.Ctl.Link();
             this.gitLink = new MineFishV2_Setting.Ctl.Link();
             this.ytLink = new MineFishV2_Setting.Ctl.Link();
             this.tLink = new MineFishV2_Setting.Ctl.Link();
             this.dcLink = new MineFishV2_Setting.Ctl.Link();
+            this.startBtn = new MineFishV2_Setting.Ctl.UserBtn();
             this.saveBtn = new MineFishV2_Setting.Ctl.UserBtn();
             this.autoDetect = new MineFishV2_Setting.Ctl.UserBtn();
-            this.verLabel = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
-            this.centerPanel.SuspendLayout();
             this.snsPanel.SuspendLayout();
+            this.centerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // imageBox
@@ -62,7 +67,7 @@
             this.imageBox.FormattingEnabled = true;
             this.imageBox.Location = new System.Drawing.Point(55, 2);
             this.imageBox.Name = "imageBox";
-            this.imageBox.Size = new System.Drawing.Size(188, 23);
+            this.imageBox.Size = new System.Drawing.Size(172, 23);
             this.imageBox.TabIndex = 0;
             // 
             // label1
@@ -126,7 +131,7 @@
             this.startX.ForeColor = System.Drawing.Color.White;
             this.startX.Location = new System.Drawing.Point(77, 31);
             this.startX.Name = "startX";
-            this.startX.Size = new System.Drawing.Size(166, 23);
+            this.startX.Size = new System.Drawing.Size(150, 23);
             this.startX.TabIndex = 9;
             // 
             // startY
@@ -135,7 +140,7 @@
             this.startY.ForeColor = System.Drawing.Color.White;
             this.startY.Location = new System.Drawing.Point(78, 60);
             this.startY.Name = "startY";
-            this.startY.Size = new System.Drawing.Size(165, 23);
+            this.startY.Size = new System.Drawing.Size(149, 23);
             this.startY.TabIndex = 10;
             // 
             // sizeX
@@ -144,7 +149,7 @@
             this.sizeX.ForeColor = System.Drawing.Color.White;
             this.sizeX.Location = new System.Drawing.Point(52, 86);
             this.sizeX.Name = "sizeX";
-            this.sizeX.Size = new System.Drawing.Size(191, 23);
+            this.sizeX.Size = new System.Drawing.Size(175, 23);
             this.sizeX.TabIndex = 11;
             // 
             // sizeY
@@ -153,17 +158,17 @@
             this.sizeY.ForeColor = System.Drawing.Color.White;
             this.sizeY.Location = new System.Drawing.Point(52, 115);
             this.sizeY.Name = "sizeY";
-            this.sizeY.Size = new System.Drawing.Size(191, 23);
+            this.sizeY.Size = new System.Drawing.Size(175, 23);
             this.sizeY.TabIndex = 12;
             // 
             // titleLabel
             // 
             this.titleLabel.BackColor = System.Drawing.Color.Transparent;
             this.titleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.titleLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 17F, System.Drawing.FontStyle.Bold);
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(300, 100);
+            this.titleLabel.Size = new System.Drawing.Size(280, 100);
             this.titleLabel.TabIndex = 14;
             this.titleLabel.Text = "MineFish V2 Setting";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,11 +176,13 @@
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.closeBox);
+            this.topPanel.Controls.Add(this.minBox);
             this.topPanel.Controls.Add(this.titleLabel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(300, 100);
+            this.topPanel.Size = new System.Drawing.Size(280, 100);
             this.topPanel.TabIndex = 15;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
@@ -186,14 +193,38 @@
             this.mainPanel.Controls.Add(this.centerPanel);
             this.mainPanel.Controls.Add(this.label7);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mainPanel.Location = new System.Drawing.Point(0, 95);
+            this.mainPanel.Location = new System.Drawing.Point(0, 83);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(300, 325);
+            this.mainPanel.Size = new System.Drawing.Size(280, 377);
             this.mainPanel.TabIndex = 16;
             this.mainPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
             // 
+            // verLabel
+            // 
+            this.verLabel.AutoSize = true;
+            this.verLabel.Location = new System.Drawing.Point(10, 362);
+            this.verLabel.Name = "verLabel";
+            this.verLabel.Size = new System.Drawing.Size(125, 15);
+            this.verLabel.TabIndex = 20;
+            this.verLabel.Text = "MineFish V0.0.2 | Nitro";
+            // 
+            // snsPanel
+            // 
+            this.snsPanel.Controls.Add(this.mailLink);
+            this.snsPanel.Controls.Add(this.blogLink);
+            this.snsPanel.Controls.Add(this.gitLink);
+            this.snsPanel.Controls.Add(this.ytLink);
+            this.snsPanel.Controls.Add(this.tLink);
+            this.snsPanel.Controls.Add(this.dcLink);
+            this.snsPanel.Location = new System.Drawing.Point(12, 325);
+            this.snsPanel.Name = "snsPanel";
+            this.snsPanel.Size = new System.Drawing.Size(240, 34);
+            this.snsPanel.TabIndex = 19;
+            this.snsPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
+            // 
             // centerPanel
             // 
+            this.centerPanel.Controls.Add(this.startBtn);
             this.centerPanel.Controls.Add(this.label1);
             this.centerPanel.Controls.Add(this.label2);
             this.centerPanel.Controls.Add(this.saveBtn);
@@ -208,7 +239,7 @@
             this.centerPanel.Controls.Add(this.label4);
             this.centerPanel.Location = new System.Drawing.Point(13, 36);
             this.centerPanel.Name = "centerPanel";
-            this.centerPanel.Size = new System.Drawing.Size(245, 232);
+            this.centerPanel.Size = new System.Drawing.Size(230, 280);
             this.centerPanel.TabIndex = 17;
             this.centerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
             // 
@@ -223,19 +254,29 @@
             this.label7.Text = "Settings";
             this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
             // 
-            // snsPanel
+            // minBox
             // 
-            this.snsPanel.Controls.Add(this.mailLink);
-            this.snsPanel.Controls.Add(this.blogLink);
-            this.snsPanel.Controls.Add(this.gitLink);
-            this.snsPanel.Controls.Add(this.ytLink);
-            this.snsPanel.Controls.Add(this.tLink);
-            this.snsPanel.Controls.Add(this.dcLink);
-            this.snsPanel.Location = new System.Drawing.Point(20, 274);
-            this.snsPanel.Name = "snsPanel";
-            this.snsPanel.Size = new System.Drawing.Size(240, 34);
-            this.snsPanel.TabIndex = 19;
-            this.snsPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
+            this.minBox.BackColor = System.Drawing.Color.Transparent;
+            this.minBox.Location = new System.Drawing.Point(231, 3);
+            this.minBox.Name = "minBox";
+            this.minBox.Size = new System.Drawing.Size(20, 20);
+            this.minBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minBox.TabIndex = 15;
+            this.minBox.TabStop = false;
+            this.minBox.Click += new System.EventHandler(this.minBox_Click);
+            this.minBox.DoubleClick += new System.EventHandler(this.minBox_Click);
+            // 
+            // closeBox
+            // 
+            this.closeBox.BackColor = System.Drawing.Color.Transparent;
+            this.closeBox.Location = new System.Drawing.Point(254, 3);
+            this.closeBox.Name = "closeBox";
+            this.closeBox.Size = new System.Drawing.Size(20, 20);
+            this.closeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeBox.TabIndex = 16;
+            this.closeBox.TabStop = false;
+            this.closeBox.Click += new System.EventHandler(this.closeBox_Click);
+            this.closeBox.DoubleClick += new System.EventHandler(this.closeBox_Click);
             // 
             // mailLink
             // 
@@ -310,6 +351,17 @@
             this.dcLink.TabIndex = 24;
             this.dcLink.URL = "https://discord.nitrostudio.dev";
             // 
+            // startBtn
+            // 
+            this.startBtn.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(242)))), ((int)(((byte)(156)))));
+            this.startBtn.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(184)))), ((int)(((byte)(224)))));
+            this.startBtn.LabelText = "Start";
+            this.startBtn.Location = new System.Drawing.Point(3, 236);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(223, 40);
+            this.startBtn.TabIndex = 16;
+            this.startBtn.OnClick += new System.EventHandler(this.startBtn_OnClick);
+            // 
             // saveBtn
             // 
             this.saveBtn.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(46)))));
@@ -317,7 +369,7 @@
             this.saveBtn.LabelText = "Save";
             this.saveBtn.Location = new System.Drawing.Point(4, 190);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(239, 40);
+            this.saveBtn.Size = new System.Drawing.Size(223, 40);
             this.saveBtn.TabIndex = 15;
             this.saveBtn.OnClick += new System.EventHandler(this.saveBtn_OnClick);
             // 
@@ -328,25 +380,16 @@
             this.autoDetect.LabelText = "Auto Detect";
             this.autoDetect.Location = new System.Drawing.Point(4, 144);
             this.autoDetect.Name = "autoDetect";
-            this.autoDetect.Size = new System.Drawing.Size(239, 40);
+            this.autoDetect.Size = new System.Drawing.Size(223, 40);
             this.autoDetect.TabIndex = 14;
             this.autoDetect.OnClick += new System.EventHandler(this.autoDetect_OnClick);
-            // 
-            // verLabel
-            // 
-            this.verLabel.AutoSize = true;
-            this.verLabel.Location = new System.Drawing.Point(20, 308);
-            this.verLabel.Name = "verLabel";
-            this.verLabel.Size = new System.Drawing.Size(125, 15);
-            this.verLabel.TabIndex = 20;
-            this.verLabel.Text = "MineFish V0.0.2 | Nitro";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(300, 420);
+            this.ClientSize = new System.Drawing.Size(280, 460);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
             this.DoubleBuffered = true;
@@ -359,9 +402,11 @@
             this.topPanel.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.snsPanel.ResumeLayout(false);
             this.centerPanel.ResumeLayout(false);
             this.centerPanel.PerformLayout();
-            this.snsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.minBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,6 +438,9 @@
         private Ctl.Link tLink;
         private Ctl.Link dcLink;
         private System.Windows.Forms.Label verLabel;
+        private Ctl.UserBtn startBtn;
+        private System.Windows.Forms.PictureBox closeBox;
+        private System.Windows.Forms.PictureBox minBox;
     }
 }
 
