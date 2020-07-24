@@ -25,3 +25,17 @@ C:\Nitro\Github\MineFish-V2\MineFishV2\MineFishV2 Setting\MineFishV2 Setting\obj
 C:\Nitro\Github\MineFish-V2\MineFishV2\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.exe
 C:\Nitro\Github\MineFish-V2\MineFishV2\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.pdb
 C:\Nitro\Github\MineFish-V2\MineFishV2\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.csproj.Fody.CopyLocal.cache
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\bin\Debug\MineFishV2 Setting.exe.config
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\bin\Debug\MineFishV2 Setting.exe
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\bin\Debug\MineFishV2 Setting.pdb
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.csprojAssemblyReference.cache
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2_Setting.Ctl.UserBtn.resources
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2_Setting.Ctl.Link.resources
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2_Setting.ImagePreview.resources
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2_Setting.Main.resources
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2_Setting.Properties.Resources.resources
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.csproj.GenerateResource.cache
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.csproj.CoreCompileInputs.cache
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.csproj.Fody.CopyLocal.cache
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.exe
+C:\Nitro\Github\MineFish-V2\MineFishV2\Code\MineFishV2 Setting\MineFishV2 Setting\obj\Debug\MineFishV2 Setting.pdb

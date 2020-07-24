@@ -63,13 +63,18 @@ namespace MineFishV2_Setting {
         }
 
         private void getImage() {
+            string preselected = imageBox.Text;
+
             imageBox.Items.Clear();
-            if (Directory.Exists(imgPath)) {
+            if (Directory.Exists(imgPath))
                 foreach (string filePath in Directory.GetFiles(imgPath))
                     imageBox.Items.Add(Path.GetFileName(filePath));
-            }
-            if (imageBox.SelectedText.Equals("") && imageBox.Items.Count != 0)
-                imageBox.SelectedIndex = 0;
+
+            if (preselected.Equals(""))
+                if (imageBox.Items.Count != 0)
+                    imageBox.SelectedIndex = 0;
+            else
+                imageBox.Text = preselected;
         }
 
         private void autoDetect_OnClick(object sender, EventArgs e) {
