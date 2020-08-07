@@ -6,7 +6,7 @@ import configparser
 import numpy as np
 
 print('MineFish V2')
-print('[V2.0.0]')
+print('[V2.0.1]')
 print('By Nitro (admin@nitrostudio.dev)\n')
 
 config = configparser.ConfigParser()
@@ -18,8 +18,12 @@ locStart = (int(config.get("MineFishV2 Setting", "starting_x").strip()),int(conf
 locEnd = (int(config.get("MineFishV2 Setting", "size_x").strip()), int(config.get("MineFishV2 Setting", "size_y").strip()))
 
 def getScreen(p1, p2):
-    img = pyautogui.screenshot(region=p1+p2)
-    return img
+    try:
+        img = pyautogui.screenshot(region=p1+p2)
+        return img
+    except:
+        print("[Error] Ignoring an error that occurred while grabbing the screen.")
+        return None
 
 def detectImg(image, imgT, precision, p1) :
     imgRGB = np.array(image)
